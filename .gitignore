@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Log files
+logs
+*.log
+npm-debug.log*
+
+# OS generated files
+.DS_Store
+
+# Optional: Ignore coverage reports (if you use testing)
+coverage/
+
+# Optional: Ignore build files (if you build frontend separately)
+build/
+dist/
