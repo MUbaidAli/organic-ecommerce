@@ -1,6 +1,19 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+.rubik-font {
+  font-family: "Rubik Wet Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  /* font-optical-sizing: auto; */
+  /* font-weight: 400; */
+  /* font-style: normal; */
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -12,4 +25,75 @@ body {
 .grad {
   width: 500px;
   background: radial-gradient(circle at 70% 30%, #338a45, #5bab60);
+}
+
+body {
+  background: url("./assets/bg.svg") no-repeat;
+  margin: 0 auto;
+  background-size: contain;
+  height: 10000px;
+  width: 100%;
+}
+
+.hero {
+  background-image: url("./assets//home-hero-img.svg");
+  width: 100%;
+  position: relative;
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.flip {
+  transform: scaleX(-1);
+  /* transform: rotate(180deg); */
+}
+
+.bgblur {
+  backdrop-filter: blur(8px);
+}
+.spinner {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  height: 100vh;
+  font-size: 5rem;
+}
+
+.mage,
+.frog,
+.moon {
+  /* width: 200px; */
+  /* height: 200px; */
+  border: 1px solid black;
+}
+
+/* animations  */
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+.floating2 {
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+}
+.floating3 {
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
 }
