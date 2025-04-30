@@ -9,7 +9,7 @@ function HeroSection() {
     translateY: [-50, 50], // move from -50px to 0px as you scroll
   });
   const upParallax = useParallax({
-    translateY: [50, -50], // move from -50px to 0px as you scroll
+    translateY: [60, -50], // move from -50px to 0px as you scroll
   });
   const beeParallax = useParallax({
     translateX: [50, -50],
@@ -79,10 +79,7 @@ function HeroSection() {
           className="absolute left-140 bottom-40 z-9 floating"
           ref={beeParallax.ref}
         /> */}
-        <div
-          ref={upParallax.ref}
-          className="hero-content flex-col flex items-center lg:flex-row justify-end my-10 z-100 relative w-full"
-        >
+        <div className="hero-content flex-col flex items-center lg:flex-row justify-end my-10 z-100 relative w-full">
           <div className="flex-1 md:pt-0 pt-20">
             {/* <img src={hero1} className="" /> */}
           </div>

@@ -13,8 +13,8 @@ function Navbar() {
         alt="monkey image"
         className="absolute top-0 right-50 z-10"
       />
-      <nav className=" pt-5 fixed w-full z-50">
-        <div className="container mx-auto max-w-7xl bg-[#FFFFFFCC] rounded-2xl px-10">
+      <nav className=" pt-5 fixed w-full z-50 px-3">
+        <div className="container mx-auto max-w-7xl bg-[#FFFFFFCC] rounded-2xl md:px-10 px-3">
           <div className="navbar ">
             <div className="navbar-start">
               <div className="dropdown">
@@ -92,12 +92,18 @@ function Navbar() {
                 </ul>
               </div>
             </div>
-            <div className="navbar-end">
-              <button className="btn bg-white border-0 shadow-none   text-[#338A45] mx-3 w-[140px]">
-                <i class="fa-solid fa-arrow-right-to-bracket mx-1"></i>
-                Like
+            <div className="navbar-end ">
+              <button
+                href="#"
+                className=" btn bg-[#F9A901] shadow-none border-0   text-white  font-[500] sm:hidden block"
+              >
+                Login/Sell
               </button>
-              <button className="btn bg-[#F9A901] shadow-none border-0   text-white w-[140px] font-[500]">
+              <button className="sm:block hidden btn bg-white border-0 shadow-none   text-[#338A45] mx-3 w-[140px]">
+                <i class="fa-solid fa-arrow-right-to-bracket mx-1"></i>
+                Sign In
+              </button>
+              <button className="sm:block hidden btn bg-[#F9A901] shadow-none border-0   text-white w-[140px] font-[500]">
                 <i class="fa-solid fa-arrow-right-to-bracket mx-1"></i>
                 Apply to Sell
               </button>

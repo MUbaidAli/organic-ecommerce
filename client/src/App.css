@@ -10,7 +10,7 @@
 .montserrat {
   font-family: "Montserrat", sans-serif;
   /* font-optical-sizing: auto; */
-  /* font-weight: 400; */
+  /* font-weight: 800; */
   /* font-style: normal; */
 }
 
@@ -20,6 +20,7 @@ body {
   font-weight: normal;
   font-style: normal;
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 .grad {
@@ -28,11 +29,12 @@ body {
 }
 
 body {
-  background: url("./assets/bg.svg") no-repeat;
+  background: url("./assets/bg.svg") repeat-y;
   margin: 0 auto;
   background-size: contain;
-  height: 10000px;
+  height: 100000px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .hero {
@@ -76,6 +78,10 @@ body {
   animation-timing-function: ease-in-out;
   margin-left: 30px;
   margin-top: 5px;
+}
+.floating1 {
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
 .floating2 {
   animation-duration: 4s;

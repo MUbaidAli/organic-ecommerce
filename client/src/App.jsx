@@ -7,20 +7,18 @@ import HeroSection from "./components/HeroSection";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Test from "./components/Test";
 import Features from "./components/Features";
+import ProductCarousel from "./components/ProductCarousel";
+import ShopByCategory from "./components/ShopByCategory";
 
 function App() {
   return (
     <>
       <Navbar />
 
-      {/* <div className="bg"></div> */}
-      {/* <div className="overflow-y-hidden"> */}
       <HeroSection />
       <Features />
-      {/* </div> */}
-      {/* <ParallaxProvider> */}
-      <Test />
-      {/* </ParallaxProvider> */}
+      <ShopByCategory />
+      <ProductCarousel />
     </>
   );
 }
