@@ -9,6 +9,9 @@ import Test from "./components/Test";
 import Features from "./components/Features";
 import ProductCarousel from "./components/ProductCarousel";
 import ShopByCategory from "./components/ShopByCategory";
+import SaleSection from "./components/SaleSection";
+import ShopCard from "./components/ShopCard";
+import ReviewSlider from "./components/ReviewSlider";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
       <Features />
       <ShopByCategory />
       <ProductCarousel />
+      <SaleSection />
+      <ShopCard />
+      <ReviewSlider />
     </>
   );
 }
