@@ -12,6 +12,7 @@ import ShopByCategory from "./components/ShopByCategory";
 import SaleSection from "./components/SaleSection";
 import ShopCard from "./components/ShopCard";
 import ReviewSlider from "./components/ReviewSlider";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <SaleSection />
       <ShopCard />
       <ReviewSlider />
+      <Footer />
     </>
   );
 }

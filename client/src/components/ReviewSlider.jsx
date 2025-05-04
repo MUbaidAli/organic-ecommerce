@@ -1,7 +1,7 @@
 // src/components/ReviewSlider.jsx
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import customerReview from "../assets/customerReview.svg";
@@ -39,7 +39,8 @@ const ReviewSlider = () => {
           <div className="swiper-container relative flex items-center justify-center z-10">
             <Swiper
               pagination={{ clickable: true }}
-              modules={[Pagination]}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              modules={[Pagination, Autoplay]}
               className="w-full h-full "
             >
               <SwiperSlide>

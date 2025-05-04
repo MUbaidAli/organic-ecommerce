@@ -32,12 +32,12 @@ body {
   background: url("./assets/bg.svg") repeat-y;
   margin: 0 auto;
   background-size: contain;
-  height: 100000px;
+  height: auto;
   width: 100%;
   overflow-x: hidden;
 }
 
-.hero {
+.hero-bg {
   background-image: url("./assets//home-hero-img.svg");
   width: 100%;
   position: relative;
@@ -173,4 +173,17 @@ body {
 
 .swiper-pagination-bullet-active {
   background-color: rgb(211, 14, 106);
+}
+
+.footer-bg {
+  background: url("./assets/footer.svg") no-repeat;
+  width: 100%;
+  background-size: cover;
+
+  /* backdrop-filter: blur(10px); */
+}
+
+.footer-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
 }

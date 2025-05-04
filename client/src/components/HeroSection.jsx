@@ -37,7 +37,7 @@ function HeroSection() {
     <>
       <div
         ref={heroScaleParallax.ref}
-        className="hero  h-full  bg-radial-[at_75%_40%] from-[#70c175] to-[#338A45] to-50% pt-30 pb-10"
+        className="hero-bg  h-full  bg-radial-[at_75%_40%] from-[#70c175] to-[#338A45] to-50% pt-30 pb-10"
       >
         <img
           src={groundling}
