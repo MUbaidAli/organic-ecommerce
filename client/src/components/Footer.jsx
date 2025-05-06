@@ -1,9 +1,24 @@
 import logo from "../assets/logo.png";
+import parrot from "../assets/footerParrot.svg";
+import rabbit from "../assets/footerRabbit.svg";
+import { useParallax } from "react-scroll-parallax";
+
 function Footer() {
+  const downParallax = useParallax({
+    translateY: [-10, 100, "easeInCubic"], // move from -50px to 0px as you scroll
+  });
+
   return (
     <>
-      <div className=" footer-bg  ">
-        <div className=" footer-overlay py-20">
+      <div className=" footer-bg relative  ">
+        <div className=" footer-overlay pt-20">
+          <div>
+            <img
+              src={parrot}
+              alt=""
+              className="absolute sm:right-30 right-15 floating"
+            />
+          </div>
           <div>
             <div className=" ">
               <div className="hero-content max-w-6xl text-left">
@@ -51,15 +66,17 @@ function Footer() {
                       </div>
                     </div>
                   </div>
+
                   <button className="sm:block hidden btn bg-[#FF8A00] shadow-none border-0   text-white w-[140px] font-[500] my-3">
-                    <i class="fa-solid fa-arrow-right-to-bracket mx-1"></i>
+                    {/* <i class="fa-solid fa-sheet-plastic"></i> */}
+                    <i class="fa-solid fa-sheet-plastic mx-2"></i>
                     Apply to Sell
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <footer className="container mx-auto max-w-7xl footer sm:footer-horizontal  text-white p-10 items-center ">
+          <footer className="relative container mx-auto max-w-7xl px-8 footer sm:footer-horizontal grid md:grid-cols-4 grid-cols-2  text-white p-10 items-center ">
             <aside className="w-40 text-center">
               <img src={logo} alt="" className="w-30" />
               <p>Your trusted marketplace for certified organic products.</p>
@@ -78,7 +95,7 @@ function Footer() {
               <a className="link link-hover">Jobs</a>
               <a className="link link-hover">Press kit</a>
             </nav>
-            <nav>
+            <nav className="w-full">
               <form>
                 <h6 className="footer-title">Newsletter</h6>
                 <fieldset className="w-80">
@@ -98,8 +115,10 @@ function Footer() {
                 </fieldset>
               </form>
             </nav>
+            <img src={rabbit} alt="" className="relative right-0" />
           </footer>
-        </div>{" "}
+          <div className="foot-bottom" ref={downParallax.ref}></div>
+        </div>
       </div>
     </>
   );

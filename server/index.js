@@ -2,10 +2,20 @@ require("dotenv").config();
 const express = require("express");
 const testRoute = require("./routes/testRoute");
 const connection = require("./connection/connect");
+const User = require("./models/userModel");
 const app = express();
-
+const userRoute = require("./routes/userRoute");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
 // middlewares
+app.use(
+  cors({
+    origin: "http://localhost:3000", // Frontend URL
+    credentials: true, // Allow cookies to be sent
+  })
+);
 app.use(express.json());
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 // database Connection
 connection();
@@ -15,6 +25,7 @@ const PORT = process.env.PORT || 5000;
 // console.log(process.env.NODE_ENV);
 // All API Routes
 app.use("/", testRoute);
+app.use("/api", userRoute);
 
 // custom 404 Page Not Found Handler
 app.use((req, res, next) => {
@@ -23,6 +34,7 @@ app.use((req, res, next) => {
     message: "Route not found",
   });
 });
+
 //Custom Error Handler
 app.use((err, req, res, next) => {
   const { statusCode = 500, message = "something went wrong" } = err;

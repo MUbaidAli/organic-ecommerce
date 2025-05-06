@@ -1,6 +1,7 @@
 import { useParallax } from "react-scroll-parallax";
 import logo from "../assets/logo.png";
 import monkey from "../assets/monkey.svg";
+import { Link } from "react-router-dom";
 function Navbar() {
   const upParallax = useParallax({
     translateY: [-100, 40], // move from -50px to 0px as you scroll
@@ -99,12 +100,14 @@ function Navbar() {
               >
                 Login/Sell
               </button>
-              <button className="sm:block hidden btn bg-white border-0 shadow-none   text-[#338A45] mx-3 w-[140px]">
-                <i class="fa-solid fa-arrow-right-to-bracket mx-1"></i>
-                Sign In
-              </button>
+              <Link to={"/login"}>
+                <button className="sm:block hidden btn bg-white border-0 shadow-none   text-[#338A45] mx-3 w-[140px]">
+                  <i class="fa-solid fa-arrow-right-to-bracket mx-1"></i>
+                  Sign In
+                </button>
+              </Link>
               <button className="sm:block hidden btn bg-[#F9A901] shadow-none border-0   text-white w-[140px] font-[500]">
-                <i class="fa-solid fa-arrow-right-to-bracket mx-1"></i>
+                <i class="fa-solid fa-sheet-plastic mx-1"></i>
                 Apply to Sell
               </button>
             </div>
