@@ -31,7 +31,7 @@ body {
 body {
   background: url("./assets/bg.svg") repeat-y;
   margin: 0 auto;
-  background-size: contain;
+  background-size: cover;
   height: auto;
   width: 100%;
   overflow-x: hidden;
@@ -240,6 +240,7 @@ body {
   transform: rotate(88deg);
 }
 
-body {
+/* body {
   background-color: #338a45;
-}
+  width: 100%;
+} */
