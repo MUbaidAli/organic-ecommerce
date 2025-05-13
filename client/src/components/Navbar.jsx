@@ -1,7 +1,7 @@
 import { useParallax } from "react-scroll-parallax";
 import logo from "../assets/logo.png";
 import monkey from "../assets/monkey.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 function Navbar() {
   const upParallax = useParallax({
     translateY: [-100, 40], // move from -50px to 0px as you scroll
@@ -51,7 +51,7 @@ function Navbar() {
                     <a>About Us</a>
                   </li>
                   <li>
-                    <a>Products</a>
+                    <NavLink to={"/app-products"}>Products</NavLink>
                   </li>
                   <li>
                     <a>Shops</a>
@@ -76,9 +76,12 @@ function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <a className="hover:text-[#FF8A00] hover:bg-transparent">
+                    <NavLink
+                      className="hover:text-[#FF8A00] hover:bg-transparent"
+                      to={"/all-products"}
+                    >
                       Products
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
                     <a className="hover:text-[#FF8A00] hover:bg-transparent">

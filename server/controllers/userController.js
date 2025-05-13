@@ -6,11 +6,13 @@ const bcrypt = require("bcrypt");
 // register
 const register = wrapAsync(async (req, res) => {
   const { name, email, password, role } = req.body;
-
+  console.log(req.body, "run");
+  console.log(name, email, password, role, "run");
   const isUserExist = await User.findOne({ email });
   if (isUserExist) {
     throw new ExpressError(400, "User already exists");
   }
+  console.log(isUserExist, "run");
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -40,6 +42,7 @@ const register = wrapAsync(async (req, res) => {
 // login
 const login = wrapAsync(async (req, res) => {
   const { email, password } = req.body;
+  console.log(req.body);
   const user = await User.findOne({ email });
   if (!user) return res.status(400).json({ message: "User Not Exist" });
 
@@ -71,6 +74,12 @@ const login = wrapAsync(async (req, res) => {
   });
 });
 
+// /me
+const me = (req, res) => {
+  console.log("meee");
+  res.status(200).json(req.user);
+};
+
 // logout
 const logout = (req, res) => {
   res.clearCookie("token", {
@@ -82,4 +91,4 @@ const logout = (req, res) => {
   res.status(200).json({ message: "Logged out successfully" });
 };
 
-module.exports = { login, register, logout };
+module.exports = { login, register, logout, me };
